@@ -4,10 +4,14 @@
 /.agents/skills/cloudflare
 /.agents/skills/neon
 /.agents/skills/neon-postgres
+/.agents/skills/ponytail
+/.agents/skills/unslop
 /.claude/skills/.ruler-managed.json
 /.claude/skills/cloudflare
 /.claude/skills/neon
 /.claude/skills/neon-postgres
+/.claude/skills/ponytail
+/.claude/skills/unslop
 /.codex/config.toml
 /.codex/config.toml.ruler-generated
 /.mcp.json
