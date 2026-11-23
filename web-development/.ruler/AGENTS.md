@@ -4,8 +4,7 @@ Sessions for web projects start in this folder. They get everything from the
 root AGENTS.md plus the skills, MCP servers and repos below.
 
 - Skills: see the web-development section of SKILLS.md at the repo root.
-- MCP servers: Context7 (library docs), Neon (Postgres) and the Cloudflare
-  API.
+- MCP servers: see the web-development section of MCP-SERVERS.md.
 - For browser work (opening pages, screenshots, recordings, testing web
   apps), use the `agent-browser` CLI. If it's missing, install it with
   `npm install -g agent-browser`, then `agent-browser install` (downloads its

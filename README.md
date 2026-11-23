@@ -13,6 +13,8 @@ agent reads by [Ruler](https://github.com/intellectronica/ruler).
   domain's.
 - `SKILLS.md`: every skill, grouped by domain, with how it runs and where it
   came from. Generated; see below.
+- `MCP-SERVERS.md`: every MCP server, grouped by domain, with what it
+  connects to and what it's for. Generated; see below.
 - Each skill folder has a `SOURCE.txt` with its upstream repo, commit and any
   local edits, plus the upstream license.
 
@@ -23,7 +25,7 @@ repo root:
 
     node apply.mjs
 
-It does two things:
+It does three things:
 
 1. Runs `npx @intellectronica/ruler apply`. Ruler writes `AGENTS.md`,
    `CLAUDE.md`, `.mcp.json`, `.codex/config.toml` and the `.claude/skills` and
@@ -34,8 +36,16 @@ It does two things:
    description from `SKILL.md`, "automatically" or "`/name` only" from its
    `disable-model-invocation` setting, the domain from the folder it's in, and
    the source from `SOURCE.txt`. Commit it with the change.
+3. Rebuilds `MCP-SERVERS.md` from each `ruler.toml`: the server name, its URL
+   or command, which agents get it, and a description taken from the comment
+   line directly above its `[mcp_servers.<name>]` table. When you add a
+   server, write that comment. Commit the file with the change.
 
-`node apply.mjs --index-only` rebuilds `SKILLS.md` without running Ruler.
+`node apply.mjs --index-only` rebuilds both lists without running Ruler.
+
+Skills add up from the root to the folder a session starts in. MCP servers
+don't: a session gets only the servers in its own folder's `ruler.toml`,
+which is why `web-development/` repeats Context7.
 
 ## Starting a session
 

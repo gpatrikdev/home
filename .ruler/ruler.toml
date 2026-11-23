@@ -18,7 +18,10 @@ enabled = true
 [backup]
 enabled = false
 
-# MCP servers for sessions started at the root.
+# MCP servers for sessions started at the root. The comment line directly
+# above each server is its description in MCP-SERVERS.md.
+
+# Library and framework docs, looked up on demand.
 [mcp_servers.context7]
 type = "http"
 url = "https://mcp.context7.com/mcp"
