@@ -1,0 +1,3 @@
+Vendored from https://github.com/neondatabase/agent-skills (skills/neon-postgres)
+commit d3601d9e1f9398b96a1ee25047bafba5f04199eb (2026-11-18)
+Update by re-copying the folder from that repo.

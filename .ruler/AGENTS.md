@@ -4,8 +4,9 @@ This is the starting point for coding-agent sessions. It holds instructions
 and skills that apply across all of my repos, and points at each project repo.
 
 - Agent setup lives in `.ruler/`: instructions in `.ruler/*.md`, MCP servers in
-  `.ruler/ruler.toml`, shared skills in `.ruler/skills/<name>/SKILL.md` (none
-  yet). Edit only those, then run `npx @intellectronica/ruler apply`. It
+  `.ruler/ruler.toml`, shared skills in `.ruler/skills/<name>/SKILL.md`
+  (cloudflare, neon, neon-postgres; each SOURCE.txt says where it came from).
+  Edit only those, then run `npx @intellectronica/ruler apply`. It
   regenerates AGENTS.md, CLAUDE.md, .mcp.json, .codex/config.toml and the
   skill folders, which are gitignored.
 - Before working in another repo, read that repo's own AGENTS.md. Its rules
