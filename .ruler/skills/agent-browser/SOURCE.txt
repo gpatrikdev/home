@@ -1,0 +1,4 @@
+Vendored from https://github.com/vercel-labs/agent-browser (skills/agent-browser)
+commit e0d56f21bb81a7e72c6ea8550de00e091d2668ac (2026-11-23), CLI version 0.43.0 at that commit
+This is a stub: the real usage guide comes from the installed CLI
+(`agent-browser skills get core`). Update by re-copying the folder.

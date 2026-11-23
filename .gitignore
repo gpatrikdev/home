@@ -1,6 +1,7 @@
 
 # START Ruler Generated Files
 /.agents/skills/.ruler-managed.json
+/.agents/skills/agent-browser
 /.agents/skills/before-and-after
 /.agents/skills/cloudflare
 /.agents/skills/neon
@@ -8,6 +9,7 @@
 /.agents/skills/ponytail
 /.agents/skills/unslop
 /.claude/skills/.ruler-managed.json
+/.claude/skills/agent-browser
 /.claude/skills/before-and-after
 /.claude/skills/cloudflare
 /.claude/skills/neon
