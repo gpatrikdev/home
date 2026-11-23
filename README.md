@@ -43,6 +43,10 @@ It does three things:
 
 `node apply.mjs --index-only` rebuilds both lists without running Ruler.
 
+Both lists start with a "Last regenerated" line showing when `apply.mjs`
+last wrote them, in local time. Because it changes on every run, both files
+show a one-line diff even when nothing else changed.
+
 Skills add up from the root to the folder a session starts in. MCP servers
 don't: a session gets only the servers in its own folder's `ruler.toml`,
 which is why `web-development/` repeats Context7.
