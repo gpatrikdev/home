@@ -1,0 +1,29 @@
+# Ruler config for the web-development domain. Applied from the repo root
+# with `npx @intellectronica/ruler apply` (nested mode).
+
+default_agents = ["claude", "codex"]
+
+[mcp]
+enabled = true
+merge_strategy = "overwrite"
+
+[gitignore]
+enabled = true
+
+[backup]
+enabled = false
+
+# MCP servers for sessions started in web-development/. Context7 is repeated
+# from the root so it is there even if an agent ignores parent MCP config.
+# Remote servers ask you to sign in on first use.
+[mcp_servers.context7]
+type = "http"
+url = "https://mcp.context7.com/mcp"
+
+[mcp_servers.Neon]
+type = "http"
+url = "https://mcp.neon.tech/mcp"
+
+[mcp_servers.cloudflare-api]
+type = "http"
+url = "https://mcp.cloudflare.com/mcp"

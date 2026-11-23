@@ -3,6 +3,10 @@
 
 default_agents = ["claude", "codex"]
 
+# Domain folders (web-development/, ...) have their own .ruler/ and get their
+# own generated instructions, skills and MCP config.
+nested = true
+
 [mcp]
 enabled = true
 merge_strategy = "overwrite"
@@ -14,15 +18,7 @@ enabled = true
 [backup]
 enabled = false
 
-# MCP servers for both agents. Remote ones ask you to sign in on first use.
+# MCP servers for sessions started at the root.
 [mcp_servers.context7]
 type = "http"
 url = "https://mcp.context7.com/mcp"
-
-[mcp_servers.Neon]
-type = "http"
-url = "https://mcp.neon.tech/mcp"
-
-[mcp_servers.cloudflare-api]
-type = "http"
-url = "https://mcp.cloudflare.com/mcp"

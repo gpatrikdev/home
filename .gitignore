@@ -1,9 +1,6 @@
 
 # START Ruler Generated Files
 /.agents/skills/.ruler-managed.json
-/.agents/skills/agent-browser
-/.agents/skills/before-and-after
-/.agents/skills/cloudflare
 /.agents/skills/code-review
 /.agents/skills/codebase-design
 /.agents/skills/diagnosing-bugs
@@ -11,8 +8,6 @@
 /.agents/skills/grill-with-docs
 /.agents/skills/grilling
 /.agents/skills/implement
-/.agents/skills/neon
-/.agents/skills/neon-postgres
 /.agents/skills/ponytail
 /.agents/skills/pr
 /.agents/skills/retro
@@ -23,9 +18,6 @@
 /.agents/skills/unslop
 /.agents/skills/writing-for-agents
 /.claude/skills/.ruler-managed.json
-/.claude/skills/agent-browser
-/.claude/skills/before-and-after
-/.claude/skills/cloudflare
 /.claude/skills/code-review
 /.claude/skills/codebase-design
 /.claude/skills/diagnosing-bugs
@@ -33,8 +25,6 @@
 /.claude/skills/grill-with-docs
 /.claude/skills/grilling
 /.claude/skills/implement
-/.claude/skills/neon
-/.claude/skills/neon-postgres
 /.claude/skills/ponytail
 /.claude/skills/pr
 /.claude/skills/retro
@@ -50,4 +40,22 @@
 /.mcp.json.ruler-generated
 /AGENTS.md
 /CLAUDE.md
+/web-development/.agents/skills/.ruler-managed.json
+/web-development/.agents/skills/agent-browser
+/web-development/.agents/skills/before-and-after
+/web-development/.agents/skills/cloudflare
+/web-development/.agents/skills/neon
+/web-development/.agents/skills/neon-postgres
+/web-development/.claude/skills/.ruler-managed.json
+/web-development/.claude/skills/agent-browser
+/web-development/.claude/skills/before-and-after
+/web-development/.claude/skills/cloudflare
+/web-development/.claude/skills/neon
+/web-development/.claude/skills/neon-postgres
+/web-development/.codex/config.toml
+/web-development/.codex/config.toml.ruler-generated
+/web-development/.mcp.json
+/web-development/.mcp.json.ruler-generated
+/web-development/AGENTS.md
+/web-development/CLAUDE.md
 # END Ruler Generated Files
