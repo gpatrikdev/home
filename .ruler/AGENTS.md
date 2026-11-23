@@ -16,8 +16,6 @@ and skills that apply across all of my repos, and points at each project repo.
   (browser), Neon (Postgres) and the Cloudflare API.
 - For GitHub, use the `gh` CLI.
 - Use unslop on prose you write: docs, comments and commit messages.
-- Keep screenshots local. Upload them to a public host (before-and-after's
-  default, 0x0.st) only when I ask.
 
 ## Other Repos
 

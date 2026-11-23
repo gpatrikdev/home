@@ -1,4 +1,5 @@
-Vendored from https://github.com/michaelshimeles/rstack (before-and-after)
-commit 11b15767d7587bab11f6c4957507b5f26d1785c7 (2026-10-26)
-Upstream: https://github.com/vercel-labs/before-and-after (PolyForm Shield 1.0.0, see LICENSE)
-Update by re-copying the folder from rstack.
+Vendored from https://github.com/vercel-labs/before-and-after (skill/)
+commit 8306d34f459b6704e08e6adb5829fcddb0dc3557 (2026-09-02)
+License: PolyForm Shield 1.0.0 (LICENSE, copied from the repo root).
+Needs GitHub CLI 2.99+ (gh pr edit --attach); captures via agent-browser or any tool.
+Update by re-copying skill/ from that repo.
