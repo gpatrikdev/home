@@ -1,0 +1,17 @@
+# Agent tools only. Remote servers ask you to sign in on first use.
+[mcp_servers.context7]
+url = "https://mcp.context7.com/mcp"
+startup_timeout_sec = 40
+
+[mcp_servers.playwright]
+command = "npx"
+args = ["-y", "@playwright/mcp@0.0.84", "--headless", "--isolated", "--sandbox"]
+startup_timeout_sec = 60
+
+[mcp_servers.Neon]
+type = "http"
+url = "https://mcp.neon.tech/mcp"
+
+[mcp_servers.cloudflare-api]
+type = "http"
+url = "https://mcp.cloudflare.com/mcp"

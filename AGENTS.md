@@ -7,6 +7,10 @@ and skills that apply across all of my repos, and points at each project repo.
   skills are installed at user level.
 - Before working in another repo, read that repo's own AGENTS.md. Its rules
   take precedence for work inside it.
+- MCP servers for sessions started here: Context7 (library docs), Playwright
+  (browser), Neon (Postgres) and the Cloudflare API. Claude Code reads them
+  from `.mcp.json`, Codex from `.codex/config.toml`.
+- For GitHub, use the `gh` CLI.
 
 ## Other Repos
 
