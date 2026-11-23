@@ -3,7 +3,7 @@
 Sessions for web projects start in this folder. They get everything from the
 root AGENTS.md plus the skills, MCP servers and repos below.
 
-- Skills: agent-browser, before-and-after, cloudflare, neon, neon-postgres.
+- Skills: see the web-development section of SKILLS.md at the repo root.
 - MCP servers: Context7 (library docs), Neon (Postgres) and the Cloudflare
   API.
 - For browser work (opening pages, screenshots, recordings, testing web

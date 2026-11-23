@@ -1,5 +1,5 @@
 # Ruler config: https://github.com/intellectronica/ruler
-# Edit this and .ruler/*.md, then run `npx @intellectronica/ruler apply`.
+# Edit this and .ruler/*.md, then run `node apply.mjs` from the repo root.
 
 default_agents = ["claude", "codex"]
 

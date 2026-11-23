@@ -7,9 +7,10 @@ and skills that apply across all of my repos, and points at each project repo.
   servers in `.ruler/ruler.toml`, skills in `.ruler/skills/<name>/SKILL.md`
   (each skill's SOURCE.txt says where it came from). The root `.ruler/` holds
   what applies everywhere; each domain folder has its own. Edit only those,
-  then run `npx @intellectronica/ruler apply` from the repo root. It
+  then run `node apply.mjs` from the repo root. It runs Ruler, which
   regenerates AGENTS.md, CLAUDE.md, .mcp.json, .codex/config.toml and the
-  skill folders, which are gitignored.
+  skill folders (all gitignored), and rebuilds SKILLS.md, the committed list
+  of skills. Never edit those generated files by hand.
 - Before working in another repo, read that repo's own AGENTS.md. Its rules
   take precedence for work inside it.
 - MCP servers for sessions started here: Context7 (library docs).

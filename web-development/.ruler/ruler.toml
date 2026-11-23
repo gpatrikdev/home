@@ -1,5 +1,5 @@
 # Ruler config for the web-development domain. Applied from the repo root
-# with `npx @intellectronica/ruler apply` (nested mode).
+# with `node apply.mjs` (Ruler nested mode).
 
 default_agents = ["claude", "codex"]
 
