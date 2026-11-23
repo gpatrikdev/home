@@ -10,6 +10,10 @@ merge_strategy = "overwrite"
 [gitignore]
 enabled = true
 
+# Everything is in git, so skip Ruler's .bak copies.
+[backup]
+enabled = false
+
 # MCP servers for both agents. Remote ones ask you to sign in on first use.
 [mcp_servers.context7]
 type = "http"
