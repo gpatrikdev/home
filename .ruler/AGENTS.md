@@ -5,8 +5,7 @@ and skills that apply across all of my repos, and points at each project repo.
 
 - Agent setup lives in `.ruler/`: instructions in `.ruler/*.md`, MCP servers in
   `.ruler/ruler.toml`, shared skills in `.ruler/skills/<name>/SKILL.md`
-  (agent-browser, before-and-after, cloudflare, neon, neon-postgres,
-  ponytail, unslop; each SOURCE.txt says where it came from).
+  (each skill's SOURCE.txt says where it came from).
   Edit only those, then run `npx @intellectronica/ruler apply`. It
   regenerates AGENTS.md, CLAUDE.md, .mcp.json, .codex/config.toml and the
   skill folders, which are gitignored.
@@ -23,6 +22,23 @@ and skills that apply across all of my repos, and points at each project repo.
   - gh: `winget install GitHub.cli` (before-and-after needs 2.99+).
     `gh auth login` is interactive, so ask me to run it.
   For other tools, use the official Windows install method.
+
+## Workflow
+
+For new work in a project repo:
+
+1. `/grill-with-docs`: settle the plan in rounds. It records terms in the
+   repo's `GLOSSARY.md` and hard-to-reverse decisions in `docs/adr/`.
+2. `/to-spec`: write the spec to the repo's issue tracker.
+3. `/to-tickets`: split the spec into small tickets with their dependencies.
+4. `/implement`: build each ticket test-first (`tdd`), review it
+   (`code-review`), then commit.
+5. Open the PR: `pr` shapes the description, `before-and-after` attaches the
+   screenshots or recordings, `unslop` cleans the text.
+6. `/retro`: after the session, suggest improvements to this setup.
+
+For bugs, use `diagnosing-bugs`. Before the first spec or ticket in a repo,
+run `/setup-matt-pocock-skills` there once to record its issue tracker.
 
 ## Other Repos
 
