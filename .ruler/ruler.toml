@@ -1,0 +1,33 @@
+# Ruler config: https://github.com/intellectronica/ruler
+# Edit this and .ruler/*.md, then run `npx @intellectronica/ruler apply`.
+
+default_agents = ["claude", "codex"]
+
+[mcp]
+enabled = true
+merge_strategy = "overwrite"
+
+[gitignore]
+enabled = true
+
+# MCP servers for both agents. Remote ones ask you to sign in on first use.
+[mcp_servers.context7]
+type = "http"
+url = "https://mcp.context7.com/mcp"
+
+[mcp_servers.playwright]
+command = "npx"
+args = ["-y", "@playwright/mcp@0.0.84", "--headless", "--isolated", "--sandbox"]
+
+[mcp_servers.Neon]
+type = "http"
+url = "https://mcp.neon.tech/mcp"
+
+[mcp_servers.cloudflare-api]
+type = "http"
+url = "https://mcp.cloudflare.com/mcp"
+
+# Claude Code on Windows needs npx started through cmd.
+[agents.claude.mcp_servers.playwright]
+command = "cmd"
+args = ["/c", "npx", "-y", "@playwright/mcp@0.0.84", "--headless", "--isolated", "--sandbox"]

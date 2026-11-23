@@ -3,13 +3,15 @@
 This is the starting point for coding-agent sessions. It holds instructions
 and skills that apply across all of my repos, and points at each project repo.
 
-- Shared skills go in `skills/<name>/SKILL.md`. There are none yet, and no
-  skills are installed at user level.
+- Agent setup lives in `.ruler/`: instructions in `.ruler/*.md`, MCP servers in
+  `.ruler/ruler.toml`, shared skills in `.ruler/skills/<name>/SKILL.md` (none
+  yet). Edit only those, then run `npx @intellectronica/ruler apply`. It
+  regenerates AGENTS.md, CLAUDE.md, .mcp.json, .codex/config.toml and the
+  skill folders, which are gitignored.
 - Before working in another repo, read that repo's own AGENTS.md. Its rules
   take precedence for work inside it.
 - MCP servers for sessions started here: Context7 (library docs), Playwright
-  (browser), Neon (Postgres) and the Cloudflare API. Claude Code reads them
-  from `.mcp.json`, Codex from `.codex/config.toml`.
+  (browser), Neon (Postgres) and the Cloudflare API.
 - For GitHub, use the `gh` CLI.
 
 ## Other Repos
