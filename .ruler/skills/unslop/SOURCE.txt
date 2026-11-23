@@ -1,4 +1,7 @@
 Vendored from https://github.com/cursor/plugins (pstack/skills/unslop)
 commit 7a583913eb1b8d1a0ee76753d1a2cf072e7b54f9 (2026-11-21)
-Local change: removed the "disable-model-invocation: true" line so agents
-can apply it to their own writing. Repeat that edit when updating.
+Local changes (repeat when updating):
+- removed the "disable-model-invocation: true" line so agents apply it
+  without a typed /unslop;
+- description replaced with the one from michaelshimeles/rstack's unslop,
+  which says when to apply it. The rule list is Cursor's current one.

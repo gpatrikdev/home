@@ -15,7 +15,6 @@ and skills that apply across all of my repos, and points at each project repo.
 - MCP servers for sessions started here: Context7 (library docs), Playwright
   (browser), Neon (Postgres) and the Cloudflare API.
 - For GitHub, use the `gh` CLI.
-- Use unslop on prose you write: docs, comments and commit messages.
 
 ## Other Repos
 
