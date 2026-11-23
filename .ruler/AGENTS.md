@@ -5,8 +5,8 @@ and skills that apply across all of my repos, and points at each project repo.
 
 - Agent setup lives in `.ruler/`: instructions in `.ruler/*.md`, MCP servers in
   `.ruler/ruler.toml`, shared skills in `.ruler/skills/<name>/SKILL.md`
-  (cloudflare, neon, neon-postgres, ponytail, unslop; each SOURCE.txt says
-  where it came from).
+  (before-and-after, cloudflare, neon, neon-postgres, ponytail, unslop; each
+  SOURCE.txt says where it came from).
   Edit only those, then run `npx @intellectronica/ruler apply`. It
   regenerates AGENTS.md, CLAUDE.md, .mcp.json, .codex/config.toml and the
   skill folders, which are gitignored.
@@ -16,6 +16,8 @@ and skills that apply across all of my repos, and points at each project repo.
   (browser), Neon (Postgres) and the Cloudflare API.
 - For GitHub, use the `gh` CLI.
 - Use unslop on prose you write: docs, comments and commit messages.
+- Keep screenshots local. Upload them to a public host (before-and-after's
+  default, 0x0.st) only when I ask.
 
 ## Other Repos
 

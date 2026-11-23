@@ -1,0 +1,4 @@
+Vendored from https://github.com/michaelshimeles/rstack (before-and-after)
+commit 11b15767d7587bab11f6c4957507b5f26d1785c7 (2026-10-26)
+Upstream: https://github.com/vercel-labs/before-and-after (PolyForm Shield 1.0.0, see LICENSE)
+Update by re-copying the folder from rstack.
