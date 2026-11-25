@@ -17,10 +17,10 @@ if (!existsSync(join(root, ".ruler"))) {
 }
 
 if (!indexOnly) {
-  const ruler = spawnSync("npx", ["@intellectronica/ruler", "apply", ...args], {
-    stdio: "inherit",
-    shell: process.platform === "win32",
-  });
+  // One command string through the shell, so `npx` resolves on every OS
+  // (npx.cmd on Windows) without Node's warning about unescaped shell args.
+  const command = ["npx", "@intellectronica/ruler", "apply", ...args].map(shellQuote).join(" ");
+  const ruler = spawnSync(command, { stdio: "inherit", shell: true });
   if (ruler.status !== 0) process.exit(ruler.status ?? 1);
 }
 
@@ -118,12 +118,14 @@ function writeMcpServers() {
     if (!existsSync(file)) continue;
     const servers = mcpServers(readFileSync(file, "utf8"));
     if (servers.length === 0) continue;
-    const startIn = domain.folder ? `\`${domain.folder}/\`` : "the repo root";
+    const startIn = domain.folder
+      ? `started in \`${domain.folder}/\` get these plus the shared ones`
+      : "get these wherever they start";
     sections.push(
       [
         `## ${domain.name} (${servers.length})`,
         "",
-        `Sessions started in ${startIn}. Defined in \`${rulerPath(domain)}/ruler.toml\`.`,
+        `Sessions ${startIn}. Defined in \`${rulerPath(domain)}/ruler.toml\`.`,
         "",
         "| Server | Connects to | What it's for | Agents |",
         "|---|---|---|---|",
@@ -138,9 +140,9 @@ function writeMcpServers() {
     "",
     generatedNote(),
     "",
-    "Unlike skills, MCP servers are not inherited: a session gets only the servers listed for " +
-      "the folder it starts in. The description comes from the comment line directly above " +
-      "each server in `ruler.toml`.",
+    "Like skills, MCP servers add up: a session started in a domain folder gets the shared " +
+      "servers plus that domain's. Define a shared server only in the root `.ruler/ruler.toml`. " +
+      "The description comes from the comment line directly above each server in `ruler.toml`.",
     "",
     sections.join("\n\n"),
   ]);
@@ -236,6 +238,10 @@ function mcpServers(text) {
       ? "all"
       : [...s.agents].join(", ") + " only",
   }));
+}
+
+function shellQuote(arg) {
+  return /^[\w@%+=:,./-]+$/.test(arg) ? arg : `"${arg.replace(/(["\\$`])/g, "\\$1")}"`;
 }
 
 function unquote(value) {

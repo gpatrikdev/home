@@ -13,13 +13,9 @@ enabled = true
 [backup]
 enabled = false
 
-# MCP servers for sessions started in game-development/. The comment line
-# directly above each server is its description in MCP-SERVERS.md.
-
-# Library and framework docs, looked up on demand.
-[mcp_servers.context7]
-type = "http"
-url = "https://mcp.context7.com/mcp"
+# MCP servers for sessions started in game-development/, on top of the shared
+# ones in the root .ruler/ruler.toml. The comment line directly above each
+# server is its description in MCP-SERVERS.md.
 
 # Godot: launch the editor, run the game and read its debug output, edit scenes.
 [mcp_servers.godot]

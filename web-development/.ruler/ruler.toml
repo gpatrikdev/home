@@ -13,15 +13,10 @@ enabled = true
 [backup]
 enabled = false
 
-# MCP servers for sessions started in web-development/. Context7 is repeated
-# from the root so it is there even if an agent ignores parent MCP config.
-# Remote servers ask you to sign in on first use. The comment line directly
+# MCP servers for sessions started in web-development/, on top of the shared
+# ones in the root .ruler/ruler.toml. Remote servers ask you to sign in on
+# first use. The comment line directly
 # above each server is its description in MCP-SERVERS.md.
-
-# Library and framework docs, looked up on demand.
-[mcp_servers.context7]
-type = "http"
-url = "https://mcp.context7.com/mcp"
 
 # Neon Postgres: projects, branches, SQL and migrations.
 [mcp_servers.Neon]

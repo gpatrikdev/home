@@ -54,9 +54,11 @@ Both lists start with a "Last regenerated" line showing when `apply.mjs`
 last wrote them, in local time. Because it changes on every run, both files
 show a one-line diff even when nothing else changed.
 
-Skills add up from the root to the folder a session starts in. MCP servers
-don't: a session gets only the servers in its own folder's `ruler.toml`,
-which is why `web-development/` repeats Context7.
+Instructions, skills and MCP servers all add up from the root to the folder
+a session starts in: Claude Code and Codex read the root's files as well as
+the domain's (checked with `claude mcp list` and `codex mcp list` in
+`web-development/`). So define a shared server only in the root
+`.ruler/ruler.toml`, and give each domain only its own servers.
 
 ## Starting a session
 
