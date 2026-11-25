@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 // Regenerates the agent files with Ruler, then rebuilds SKILLS.md and MCP-SERVERS.md.
+// Works on Windows, macOS and Linux.
 // Run from the repo root:   node apply.mjs          (extra args go to Ruler)
 // Rebuild the lists only:   node apply.mjs --index-only
 import { spawnSync } from "node:child_process";
@@ -29,6 +30,29 @@ for (const entry of readdirSync(root, { withFileTypes: true })) {
   if (!entry.isDirectory() || entry.name.startsWith(".")) continue;
   const ruler = join(root, entry.name, ".ruler");
   if (existsSync(ruler)) domains.push({ name: entry.name, folder: entry.name, ruler });
+}
+
+// Claude Code on native Windows can't start `npx` directly; it needs `cmd /c npx`.
+// ruler.toml keeps plain `npx` so it works everywhere, and the generated
+// (gitignored) .mcp.json files are adjusted here on Windows only.
+if (!indexOnly && process.platform === "win32") {
+  for (const domain of domains) {
+    const file = join(root, domain.folder, ".mcp.json");
+    if (!existsSync(file)) continue;
+    const config = JSON.parse(readFileSync(file, "utf8"));
+    let changed = 0;
+    for (const server of Object.values(config.mcpServers ?? {})) {
+      if (server.command === "npx") {
+        server.args = ["/c", "npx", ...(server.args ?? [])];
+        server.command = "cmd";
+        changed++;
+      }
+    }
+    if (changed) {
+      writeFileSync(file, JSON.stringify(config, null, 2) + "\n");
+      console.log(`${domain.folder || "."}/.mcp.json: wrapped ${changed} npx server(s) in cmd /c for Windows.`);
+    }
+  }
 }
 
 // One timestamp per run, in local time with its UTC offset, e.g. 2026-11-23 20:15 (UTC+01:00).

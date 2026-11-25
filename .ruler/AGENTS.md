@@ -17,22 +17,32 @@ and skills that apply across all of my repos, and points at each project repo.
 - MCP servers: see MCP-SERVERS.md. Describe each new server in a comment
   line directly above its `[mcp_servers.<name>]` table in `ruler.toml`.
 - For GitHub, use the `gh` CLI.
-- Install a CLI tool when a task needs it and it's missing, then say you did.
-  This is a Windows PC. Known install commands:
-  - gh: `winget install GitHub.cli` (before-and-after needs 2.99+).
-    `gh auth login` is interactive, so ask me to run it.
-  For other tools, use the official Windows install method.
+- This repo is used on Windows, macOS and Linux. Use relative paths, and
+  check which OS you're on before running OS-specific commands.
+- Install a tool when a task needs it and it's missing, then say you did. Use
+  the OS's package manager: winget on Windows, Homebrew on macOS, the distro's
+  package manager on Linux. Known packages:
+
+  | Tool | Windows | macOS | Linux |
+  |---|---|---|---|
+  | gh (before-and-after needs 2.99+) | `winget install -e --id GitHub.cli` | `brew install gh` | distro package, e.g. `sudo dnf install gh` |
+  | agent-browser | `npm install -g agent-browser`, then `agent-browser install` | same | same |
+  | Godot | `winget install -e --id GodotEngine.GodotEngine` | `brew install --cask godot` | official build from godotengine.org (a single executable) |
+
+  For other tools, use the official install method for the OS. Ask me to run
+  anything that needs `sudo`, an admin prompt or an interactive login (such
+  as `gh auth login`).
 
 ## Domains
 
 Start a session in the folder for the kind of work. It adds that domain's
 skills, MCP servers and project repos to everything here.
 
-- `web-development\`: web apps (React, Cloudflare Workers, Neon).
-- `game-development\`: Godot games (GDScript).
+- `web-development/`: web apps (React, Cloudflare Workers, Neon).
+- `game-development/`: Godot games (GDScript).
 
-To add a domain (for example `mobile-development\`), create the folder with its
-own `.ruler\AGENTS.md`, `.ruler\ruler.toml` and `.ruler\skills\`.
+To add a domain (for example `mobile-development/`), create the folder with its
+own `.ruler/AGENTS.md`, `.ruler/ruler.toml` and `.ruler/skills/`.
 
 ## Workflow
 

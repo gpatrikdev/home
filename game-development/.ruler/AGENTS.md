@@ -9,9 +9,9 @@ the root AGENTS.md plus the skills, MCP servers and repos below.
   installed; work without them, or ask me whether to add one.
 - MCP servers: see the game-development section of MCP-SERVERS.md. Use the
   `godot` server to run the game and read its debug output after a change.
-- If Godot is missing, install it (see the install rule in the root
+- If Godot is missing, install it (see the install table in the root
   AGENTS.md). If the `godot` server can't find it, ask me to set the
-  `GODOT_PATH` user environment variable to the Godot .exe, then restart.
+  `GODOT_PATH` environment variable to the Godot executable, then restart.
 - Tests: use the project's existing framework (GUT or gdUnit4). In a project
   without one, ask me which to add; the `godot-testing` skill compares them.
 

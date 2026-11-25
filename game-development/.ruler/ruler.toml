@@ -25,8 +25,3 @@ url = "https://mcp.context7.com/mcp"
 [mcp_servers.godot]
 command = "npx"
 args = ["-y", "@coding-solo/godot-mcp"]
-
-# Claude Code on Windows needs npx started through cmd.
-[agents.claude.mcp_servers.godot]
-command = "cmd"
-args = ["/c", "npx", "-y", "@coding-solo/godot-mcp"]

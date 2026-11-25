@@ -4,6 +4,9 @@ Starting point for my coding-agent sessions (Claude Code and Codex). The
 agent setup is defined in `.ruler/` folders and turned into the files each
 agent reads by [Ruler](https://github.com/intellectronica/ruler).
 
+Works on Windows, macOS and Linux. It needs Node.js (for `npx` and
+`apply.mjs`) and git.
+
 ## Layout
 
 - `.ruler/`: applies to every session. `AGENTS.md` holds the instructions,
@@ -32,6 +35,10 @@ It does three things:
    `.agents/skills` folders at the root and in each domain folder. These are
    gitignored and overwritten on every run, so edit the `.ruler/` sources
    instead. Extra arguments go to Ruler (for example `--dry-run`).
+   On Windows it then rewrites MCP servers started with `npx` in each
+   `.mcp.json` to `cmd /c npx ...`, which Claude Code needs there; on other
+   systems the files stay as Ruler wrote them. That's why `ruler.toml` lists
+   plain `npx` and the repo works unchanged on every OS.
 2. Rebuilds `SKILLS.md` from the skill folders: name and first sentence of the
    description from `SKILL.md`, "automatically" or "`/name` only" from its
    `disable-model-invocation` setting, the domain from the folder it's in, and
