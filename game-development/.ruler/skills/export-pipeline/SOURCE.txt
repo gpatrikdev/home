@@ -1,0 +1,4 @@
+Vendored from https://github.com/jame581/GodotPrompter (skills/export-pipeline)
+commit 426e8ab597473d1c71a11a04f6f0f2e1182a8e39 (2026-11-14)
+Its "Related skills" line names other GodotPrompter skills that are not
+installed here. Update by re-copying the folder from that repo.

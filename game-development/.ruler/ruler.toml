@@ -1,0 +1,32 @@
+# Ruler config for the game-development domain. Applied from the repo root
+# with `node apply.mjs` (Ruler nested mode).
+
+default_agents = ["claude", "codex"]
+
+[mcp]
+enabled = true
+merge_strategy = "overwrite"
+
+[gitignore]
+enabled = true
+
+[backup]
+enabled = false
+
+# MCP servers for sessions started in game-development/. The comment line
+# directly above each server is its description in MCP-SERVERS.md.
+
+# Library and framework docs, looked up on demand.
+[mcp_servers.context7]
+type = "http"
+url = "https://mcp.context7.com/mcp"
+
+# Godot: launch the editor, run the game and read its debug output, edit scenes.
+[mcp_servers.godot]
+command = "npx"
+args = ["-y", "@coding-solo/godot-mcp"]
+
+# Claude Code on Windows needs npx started through cmd.
+[agents.claude.mcp_servers.godot]
+command = "cmd"
+args = ["/c", "npx", "-y", "@coding-solo/godot-mcp"]

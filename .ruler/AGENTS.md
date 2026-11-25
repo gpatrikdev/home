@@ -29,8 +29,9 @@ Start a session in the folder for the kind of work. It adds that domain's
 skills, MCP servers and project repos to everything here.
 
 - `web-development\`: web apps (React, Cloudflare Workers, Neon).
+- `game-development\`: Godot games (GDScript).
 
-To add a domain (for example `game-development\`), create the folder with its
+To add a domain (for example `mobile-development\`), create the folder with its
 own `.ruler\AGENTS.md`, `.ruler\ruler.toml` and `.ruler\skills\`.
 
 ## Workflow
@@ -43,8 +44,8 @@ For new work in a project repo:
 3. `/to-tickets`: split the spec into small tickets with their dependencies.
 4. `/implement`: build each ticket test-first (`tdd`), review it
    (`code-review`), then commit.
-5. Open the PR: `pr` shapes the description, `unslop` cleans the text. In web
-   projects, `before-and-after` attaches the screenshots or recordings.
+5. Open the PR: `pr` shapes the description, `before-and-after` attaches the
+   screenshots or recordings, `unslop` cleans the text.
 6. `/retro`: after the session, suggest improvements to this setup.
 
 For bugs, use `diagnosing-bugs`. Before the first spec or ticket in a repo,

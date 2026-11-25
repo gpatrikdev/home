@@ -1,6 +1,7 @@
 
 # START Ruler Generated Files
 /.agents/skills/.ruler-managed.json
+/.agents/skills/before-and-after
 /.agents/skills/code-review
 /.agents/skills/codebase-design
 /.agents/skills/diagnosing-bugs
@@ -18,6 +19,7 @@
 /.agents/skills/unslop
 /.agents/skills/writing-for-agents
 /.claude/skills/.ruler-managed.json
+/.claude/skills/before-and-after
 /.claude/skills/code-review
 /.claude/skills/codebase-design
 /.claude/skills/diagnosing-bugs
@@ -40,15 +42,29 @@
 /.mcp.json.ruler-generated
 /AGENTS.md
 /CLAUDE.md
+/game-development/.agents/skills/.ruler-managed.json
+/game-development/.agents/skills/export-pipeline
+/game-development/.agents/skills/gdscript-patterns
+/game-development/.agents/skills/godot-testing
+/game-development/.agents/skills/scene-organization
+/game-development/.claude/skills/.ruler-managed.json
+/game-development/.claude/skills/export-pipeline
+/game-development/.claude/skills/gdscript-patterns
+/game-development/.claude/skills/godot-testing
+/game-development/.claude/skills/scene-organization
+/game-development/.codex/config.toml
+/game-development/.codex/config.toml.ruler-generated
+/game-development/.mcp.json
+/game-development/.mcp.json.ruler-generated
+/game-development/AGENTS.md
+/game-development/CLAUDE.md
 /web-development/.agents/skills/.ruler-managed.json
 /web-development/.agents/skills/agent-browser
-/web-development/.agents/skills/before-and-after
 /web-development/.agents/skills/cloudflare
 /web-development/.agents/skills/neon
 /web-development/.agents/skills/neon-postgres
 /web-development/.claude/skills/.ruler-managed.json
 /web-development/.claude/skills/agent-browser
-/web-development/.claude/skills/before-and-after
 /web-development/.claude/skills/cloudflare
 /web-development/.claude/skills/neon
 /web-development/.claude/skills/neon-postgres
